@@ -36,6 +36,8 @@
             this.txtbBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvFormasPago = new System.Windows.Forms.DataGridView();
+            this.Cod_Forma_Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -44,8 +46,6 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.Cod_Forma_Pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormasPago)).BeginInit();
             this.panel1.SuspendLayout();
@@ -57,7 +57,7 @@
             this.lblFormaPago.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFormaPago.Location = new System.Drawing.Point(531, 16);
             this.lblFormaPago.Name = "lblFormaPago";
-            this.lblFormaPago.Size = new System.Drawing.Size(136, 23);
+            this.lblFormaPago.Size = new System.Drawing.Size(136, 21);
             this.lblFormaPago.TabIndex = 28;
             this.lblFormaPago.Text = "Formas de pago:";
             // 
@@ -93,7 +93,7 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Location = new System.Drawing.Point(6, 43);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(68, 23);
+            this.lblBuscar.Size = new System.Drawing.Size(68, 21);
             this.lblBuscar.TabIndex = 10;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -117,6 +117,21 @@
             this.dgvFormasPago.Size = new System.Drawing.Size(513, 291);
             this.dgvFormasPago.TabIndex = 29;
             this.dgvFormasPago.SelectionChanged += new System.EventHandler(this.dgvFormasPago_SelectionChanged);
+            // 
+            // Cod_Forma_Pago
+            // 
+            this.Cod_Forma_Pago.DataPropertyName = "Cod_Forma_Pago";
+            this.Cod_Forma_Pago.HeaderText = "Código";
+            this.Cod_Forma_Pago.Name = "Cod_Forma_Pago";
+            this.Cod_Forma_Pago.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Forma de pago";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 400;
             // 
             // panel1
             // 
@@ -210,21 +225,6 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // Cod_Forma_Pago
-            // 
-            this.Cod_Forma_Pago.DataPropertyName = "Cod_Forma_Pago";
-            this.Cod_Forma_Pago.HeaderText = "Código";
-            this.Cod_Forma_Pago.Name = "Cod_Forma_Pago";
-            this.Cod_Forma_Pago.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Forma de pago";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 400;
-            // 
             // frmFormasPago
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +235,7 @@
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.dgvFormasPago);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmFormasPago";

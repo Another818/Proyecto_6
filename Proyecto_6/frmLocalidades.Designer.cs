@@ -57,7 +57,7 @@
             this.lblLocalidad.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocalidad.Location = new System.Drawing.Point(530, 12);
             this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(88, 23);
+            this.lblLocalidad.Size = new System.Drawing.Size(88, 21);
             this.lblLocalidad.TabIndex = 33;
             this.lblLocalidad.Text = "Localidad:";
             // 
@@ -93,7 +93,7 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Location = new System.Drawing.Point(6, 43);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(68, 23);
+            this.lblBuscar.Size = new System.Drawing.Size(68, 21);
             this.lblBuscar.TabIndex = 10;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -235,6 +235,7 @@
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.dgvLocalidad);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmLocalidades";

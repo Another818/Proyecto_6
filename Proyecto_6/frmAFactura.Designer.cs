@@ -46,6 +46,7 @@
             this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBuscar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.dgvResumen = new System.Windows.Forms.DataGridView();
@@ -73,9 +74,8 @@
             this.txtbTotal = new System.Windows.Forms.TextBox();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.gbxBusqueda = new System.Windows.Forms.GroupBox();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.lblBusqueda = new System.Windows.Forms.Label();
             this.txtbBusqueda = new System.Windows.Forms.TextBox();
+            this.lblBusqueda = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFPlantas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -234,6 +234,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(899, 48);
             this.panel1.TabIndex = 3;
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(61, 13);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 2;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarCli_Click);
             // 
             // btnCancelar
             // 
@@ -510,16 +521,13 @@
             this.gbxBusqueda.TabStop = false;
             this.gbxBusqueda.Text = "Busqueda";
             // 
-            // btnBuscar
+            // txtbBusqueda
             // 
-            this.btnBuscar.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(61, 13);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 2;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscarCli_Click);
+            this.txtbBusqueda.Location = new System.Drawing.Point(114, 73);
+            this.txtbBusqueda.Name = "txtbBusqueda";
+            this.txtbBusqueda.Size = new System.Drawing.Size(134, 28);
+            this.txtbBusqueda.TabIndex = 1;
+            this.txtbBusqueda.TextChanged += new System.EventHandler(this.txtbBuscarCli_TextChanged);
             // 
             // lblBusqueda
             // 
@@ -529,14 +537,6 @@
             this.lblBusqueda.Size = new System.Drawing.Size(78, 20);
             this.lblBusqueda.TabIndex = 0;
             this.lblBusqueda.Text = "Busqueda:";
-            // 
-            // txtbBusqueda
-            // 
-            this.txtbBusqueda.Location = new System.Drawing.Point(114, 73);
-            this.txtbBusqueda.Name = "txtbBusqueda";
-            this.txtbBusqueda.Size = new System.Drawing.Size(134, 28);
-            this.txtbBusqueda.TabIndex = 1;
-            this.txtbBusqueda.TextChanged += new System.EventHandler(this.txtbBuscarCli_TextChanged);
             // 
             // frmAFactura
             // 
@@ -553,7 +553,9 @@
             this.Controls.Add(this.btnAgregarPlanta);
             this.Controls.Add(this.dgvFPlantas);
             this.Controls.Add(this.dgvFClientes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmAFactura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Factura";

@@ -56,7 +56,7 @@
             this.lblBarrios.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBarrios.Location = new System.Drawing.Point(530, 12);
             this.lblBarrios.Name = "lblBarrios";
-            this.lblBarrios.Size = new System.Drawing.Size(71, 23);
+            this.lblBarrios.Size = new System.Drawing.Size(71, 21);
             this.lblBarrios.TabIndex = 38;
             this.lblBarrios.Text = "Barrios:";
             // 
@@ -92,7 +92,7 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Location = new System.Drawing.Point(6, 43);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(68, 23);
+            this.lblBuscar.Size = new System.Drawing.Size(68, 21);
             this.lblBuscar.TabIndex = 10;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -234,6 +234,8 @@
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.dgvBarrios);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "frmBarrios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABM Barrios";

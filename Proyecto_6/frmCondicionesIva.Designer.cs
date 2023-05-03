@@ -36,6 +36,8 @@
             this.txtbBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvCondicionIva = new System.Windows.Forms.DataGridView();
+            this.Cod_Condicion_Iva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -44,8 +46,6 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.Cod_Condicion_Iva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCondicionIva)).BeginInit();
             this.panel1.SuspendLayout();
@@ -57,7 +57,7 @@
             this.lblCondicionIva.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCondicionIva.Location = new System.Drawing.Point(530, 12);
             this.lblCondicionIva.Name = "lblCondicionIva";
-            this.lblCondicionIva.Size = new System.Drawing.Size(143, 23);
+            this.lblCondicionIva.Size = new System.Drawing.Size(143, 21);
             this.lblCondicionIva.TabIndex = 28;
             this.lblCondicionIva.Text = "Condición de Iva:";
             // 
@@ -93,7 +93,7 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Location = new System.Drawing.Point(6, 43);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(68, 23);
+            this.lblBuscar.Size = new System.Drawing.Size(68, 21);
             this.lblBuscar.TabIndex = 10;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -117,6 +117,21 @@
             this.dgvCondicionIva.Size = new System.Drawing.Size(513, 291);
             this.dgvCondicionIva.TabIndex = 29;
             this.dgvCondicionIva.SelectionChanged += new System.EventHandler(this.dgvPlantas_SelectionChanged);
+            // 
+            // Cod_Condicion_Iva
+            // 
+            this.Cod_Condicion_Iva.DataPropertyName = "Cod_Condicion_Iva";
+            this.Cod_Condicion_Iva.HeaderText = "Código";
+            this.Cod_Condicion_Iva.Name = "Cod_Condicion_Iva";
+            this.Cod_Condicion_Iva.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.DataPropertyName = "Descripcion";
+            this.Descripcion.HeaderText = "Condición Iva";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 400;
             // 
             // panel1
             // 
@@ -210,21 +225,6 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // Cod_Condicion_Iva
-            // 
-            this.Cod_Condicion_Iva.DataPropertyName = "Cod_Condicion_Iva";
-            this.Cod_Condicion_Iva.HeaderText = "Código";
-            this.Cod_Condicion_Iva.Name = "Cod_Condicion_Iva";
-            this.Cod_Condicion_Iva.ReadOnly = true;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "Descripcion";
-            this.Descripcion.HeaderText = "Condición Iva";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 400;
-            // 
             // frmCondicionesIva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +235,7 @@
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.dgvCondicionIva);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmCondicionesIva";

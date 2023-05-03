@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblCalles = new System.Windows.Forms.Label();
             this.txtbCalles = new System.Windows.Forms.TextBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.txtbBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvCalles = new System.Windows.Forms.DataGridView();
+            this.Cod_Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -43,8 +45,6 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.Cod_Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCalles)).BeginInit();
             this.panel1.SuspendLayout();
@@ -56,7 +56,7 @@
             this.lblCalles.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCalles.Location = new System.Drawing.Point(530, 12);
             this.lblCalles.Name = "lblCalles";
-            this.lblCalles.Size = new System.Drawing.Size(62, 23);
+            this.lblCalles.Size = new System.Drawing.Size(62, 21);
             this.lblCalles.TabIndex = 43;
             this.lblCalles.Text = "Calles:";
             // 
@@ -92,7 +92,7 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Location = new System.Drawing.Point(6, 43);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(68, 23);
+            this.lblBuscar.Size = new System.Drawing.Size(68, 21);
             this.lblBuscar.TabIndex = 10;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -100,8 +100,8 @@
             // 
             this.dgvCalles.AllowUserToAddRows = false;
             this.dgvCalles.AllowUserToResizeRows = false;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.dgvCalles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dgvCalles.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCalles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Cod_Calle,
@@ -116,6 +116,21 @@
             this.dgvCalles.Size = new System.Drawing.Size(513, 291);
             this.dgvCalles.TabIndex = 44;
             this.dgvCalles.SelectionChanged += new System.EventHandler(this.dgvCalles_SelectionChanged);
+            // 
+            // Cod_Calle
+            // 
+            this.Cod_Calle.DataPropertyName = "Cod_Calle";
+            this.Cod_Calle.HeaderText = "Código";
+            this.Cod_Calle.Name = "Cod_Calle";
+            this.Cod_Calle.ReadOnly = true;
+            // 
+            // Calle
+            // 
+            this.Calle.DataPropertyName = "Calle";
+            this.Calle.HeaderText = "Calles";
+            this.Calle.Name = "Calle";
+            this.Calle.ReadOnly = true;
+            this.Calle.Width = 400;
             // 
             // panel1
             // 
@@ -209,21 +224,6 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // Cod_Calle
-            // 
-            this.Cod_Calle.DataPropertyName = "Cod_Calle";
-            this.Cod_Calle.HeaderText = "Código";
-            this.Cod_Calle.Name = "Cod_Calle";
-            this.Cod_Calle.ReadOnly = true;
-            // 
-            // Calle
-            // 
-            this.Calle.DataPropertyName = "Calle";
-            this.Calle.HeaderText = "Calles";
-            this.Calle.Name = "Calle";
-            this.Calle.ReadOnly = true;
-            this.Calle.Width = 400;
-            // 
             // frmCalles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,6 +234,8 @@
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.dgvCalles);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "frmCalles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABM Calles";

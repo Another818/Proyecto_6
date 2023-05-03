@@ -36,6 +36,8 @@
             this.txtbBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.dgvTipoPlantas = new System.Windows.Forms.DataGridView();
+            this.Cod_Tipo_Planta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -44,8 +46,6 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
-            this.Cod_Tipo_Planta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoPlantas)).BeginInit();
             this.panel1.SuspendLayout();
@@ -57,7 +57,7 @@
             this.lblTipoPlanta.Font = new System.Drawing.Font("Sitka Small", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTipoPlanta.Location = new System.Drawing.Point(531, 16);
             this.lblTipoPlanta.Name = "lblTipoPlanta";
-            this.lblTipoPlanta.Size = new System.Drawing.Size(125, 23);
+            this.lblTipoPlanta.Size = new System.Drawing.Size(125, 21);
             this.lblTipoPlanta.TabIndex = 22;
             this.lblTipoPlanta.Text = "Tipo de Planta:";
             // 
@@ -93,7 +93,7 @@
             this.lblBuscar.AutoSize = true;
             this.lblBuscar.Location = new System.Drawing.Point(6, 43);
             this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(68, 23);
+            this.lblBuscar.Size = new System.Drawing.Size(68, 21);
             this.lblBuscar.TabIndex = 10;
             this.lblBuscar.Text = "Buscar:";
             // 
@@ -117,6 +117,21 @@
             this.dgvTipoPlantas.Size = new System.Drawing.Size(513, 291);
             this.dgvTipoPlantas.TabIndex = 23;
             this.dgvTipoPlantas.SelectionChanged += new System.EventHandler(this.dgvPlantas_SelectionChanged);
+            // 
+            // Cod_Tipo_Planta
+            // 
+            this.Cod_Tipo_Planta.DataPropertyName = "Cod_Tipo_Planta";
+            this.Cod_Tipo_Planta.HeaderText = "Código";
+            this.Cod_Tipo_Planta.Name = "Cod_Tipo_Planta";
+            this.Cod_Tipo_Planta.ReadOnly = true;
+            // 
+            // Nombre
+            // 
+            this.Nombre.DataPropertyName = "Nombre";
+            this.Nombre.HeaderText = "Tipo de Planta";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Width = 400;
             // 
             // panel1
             // 
@@ -210,21 +225,6 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // Cod_Tipo_Planta
-            // 
-            this.Cod_Tipo_Planta.DataPropertyName = "Cod_Tipo_Planta";
-            this.Cod_Tipo_Planta.HeaderText = "Código";
-            this.Cod_Tipo_Planta.Name = "Cod_Tipo_Planta";
-            this.Cod_Tipo_Planta.ReadOnly = true;
-            // 
-            // Nombre
-            // 
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.HeaderText = "Tipo de Planta";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 400;
-            // 
             // frmTipoPlanta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,6 +235,7 @@
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.dgvTipoPlantas);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmTipoPlanta";

@@ -38,6 +38,7 @@
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pagado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPagar = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
             this.txtbBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnPagar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFacturas)).BeginInit();
             this.panel1.SuspendLayout();
             this.gbBusqueda.SuspendLayout();
@@ -151,6 +151,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(937, 58);
             this.panel1.TabIndex = 15;
+            // 
+            // btnPagar
+            // 
+            this.btnPagar.Location = new System.Drawing.Point(416, 12);
+            this.btnPagar.Name = "btnPagar";
+            this.btnPagar.Size = new System.Drawing.Size(75, 31);
+            this.btnPagar.TabIndex = 17;
+            this.btnPagar.Text = "Pagos";
+            this.btnPagar.UseVisualStyleBackColor = true;
+            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
             // 
             // btnActualizar
             // 
@@ -335,16 +345,6 @@
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             // 
-            // btnPagar
-            // 
-            this.btnPagar.Location = new System.Drawing.Point(416, 12);
-            this.btnPagar.Name = "btnPagar";
-            this.btnPagar.Size = new System.Drawing.Size(75, 31);
-            this.btnPagar.TabIndex = 17;
-            this.btnPagar.Text = "Pagos";
-            this.btnPagar.UseVisualStyleBackColor = true;
-            this.btnPagar.Click += new System.EventHandler(this.btnPagar_Click);
-            // 
             // frmFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,7 +354,9 @@
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvFacturas);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmFacturas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ABM Facturas";

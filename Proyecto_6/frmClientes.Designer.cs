@@ -697,6 +697,7 @@
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvClientes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmClientes";

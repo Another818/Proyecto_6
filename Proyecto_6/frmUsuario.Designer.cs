@@ -271,6 +271,8 @@
             this.Controls.Add(this.gbxUsuario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvUsuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "frmUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUsuario";
