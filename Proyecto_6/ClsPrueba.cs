@@ -7,5 +7,6 @@ namespace Proyecto_6
 {
     class ClsPrueba
     {
+        int Prueba = 0;
     }
 }
